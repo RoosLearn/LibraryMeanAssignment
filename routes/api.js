@@ -4,7 +4,7 @@ const DATA = require('../models/read')
 
 
 //get books full list
-router.get('/bookslist', async(req,res)=>{
+router.get('/api/bookslist', async(req,res)=>{
  try {
     const list = await DATA.find()
     res.send(list)
@@ -14,7 +14,7 @@ router.get('/bookslist', async(req,res)=>{
 })
  
 //book add
-router.post('/book', async(req,res)=>{
+router.post('/api/book', async(req,res)=>{
     try {
 
     let item = {
@@ -34,7 +34,7 @@ router.post('/book', async(req,res)=>{
 })
 
 //book delete
-router.delete('/book/:id', async(req,res)=>{
+router.delete('/api/book/:id', async(req,res)=>{
 
     try {
     let id = req.params.id;
@@ -69,7 +69,7 @@ router.delete('/book/:id', async(req,res)=>{
 //     }
 // })
 
-router.put('/book/:id', async(req,res) => {
+router.put('/api/book/:id', async(req,res) => {
 
     try {
         
