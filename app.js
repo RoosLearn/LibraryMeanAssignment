@@ -22,8 +22,8 @@ app.use('/api', api)
 
 //hosting
 const path = require('path');
-app.use(express.static('./dist/frontend/'))
-app.get('/*', function(req,res) {res.sendFile(path.join(__dirname + '/dist/frontend/index.html'))})
+app.use(express.static('./dist/mylibrary/'))
+app.get('/*', function(req,res) {res.sendFile(path.join(__dirname + '/dist/mylibrary/index.html'))})
 
 
 
